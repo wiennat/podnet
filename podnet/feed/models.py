@@ -5,7 +5,6 @@ class FeedSource(models.Model):
     slug = models.SlugField()
     url = models.CharField(max_length=200)
     interval = models.PositiveIntegerField()
-    feed = models.OneToOneField('FeedInfo', on_delete=models.CASCADE, default=None)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
